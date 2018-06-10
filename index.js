@@ -8,7 +8,7 @@ var router = new Router();
 app.use(bodyParser());
 
 const Authorization = `Basic ${new Buffer(
-  `matthewfowles:8b9fe0fe4182822a4da62d6b4d20315395754361`
+  `matthewfowles:${process.env.GITHUB_API}`
 ).toString("base64")}`;
 
 const createPullRequest = branch => {
